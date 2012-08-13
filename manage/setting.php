@@ -1,15 +1,17 @@
-<?php
+﻿<?php
 session_start();
 //判断登录
 if(empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && empty($_SESSION['user'])){
 	header('Location:http://'.$_SERVER['HTTP_HOST'].substr($_SERVER['PHP_SELF'],0,-9).'login.php');
 }
 
+//包含配置文件
+include_once '../_config.inc.php';
 
 $ch = !empty($_GET['ch']) ? $_GET['ch'] : '' ;//当前请求的频道文件名
 $li = !empty($_GET['li']) ? $_GET['li'] : '' ;//当前请求的频道文件名
 
-$admin_dir = dirname(__FILE__).'/';
+$admin_dir = __DIR__.DIRECTORY_SEPARATOR;
 
 //头部频道内容
 $channel = $DBopera->data_query(array('*'),array('channel'),array('chparent'=>'0'),array('chsort'=>'ASC'));

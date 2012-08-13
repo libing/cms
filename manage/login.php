@@ -1,6 +1,6 @@
 ﻿<?php
-include_once 'include/header.php';
-include_once '../include/config.inc.php';//包含配置文件
+//include_once 'include/header.php';
+include_once '../_config.inc.php';//包含配置文件
 
 session_start();
 if(!empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && !empty($_SESSION['user'])){
@@ -9,6 +9,7 @@ if(!empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && !empty($_SESSION[
 
 if(!empty($_POST) && $_GET['ch'] == 'login'){
 	$userData = $DBopera->data_query(array('*'),array('members'),array('`user`'=>$_POST['user'],'`passwd`'=>md5( addslashes( $_POST['passwd'] ) )));
+
 	if(!empty($userData)){
 		$_SESSION['login'] = 'yes';
 		$_SESSION['user'] = $_POST['user'];

@@ -1,10 +1,15 @@
-<?php
+﻿<?php
 class Dbopera {
+	
+	private $prefix;
 	
 	function __construct($config) {
 		$conn = mysql_connect($config['HOST'],$config['DBUSER'],$config['DBPASSWD']) or die("Database link error!");
 		mysql_select_db($config['DBNAME'],$conn);
 		mysql_query("set names 'utf8'");
+		
+		//表明前缀
+		$this->prefix = 'lb_';
 	}
 	
 	// 添加单列数据函数
@@ -45,8 +50,6 @@ class Dbopera {
 	 *				
 	 **********************/
 	function data_join($table, $field_array, $value_array) {
-		//表名前缀
-		$prefix = 'hi_';
 		if (is_array($field_array) && is_array ( $value_array )) {
 			$field = '';
 			$str_value = '';
@@ -78,7 +81,7 @@ class Dbopera {
 			}
 			//$str = implode(',',$str_array);
 			
-			$sql = "INSERT INTO {$prefix}{$table} {$field} values {$str_value}";
+			$sql = "INSERT INTO {$this->prefix}{$table} {$field} values {$str_value}";
 			mysql_query ( $sql );
 			if (mysql_affected_rows () >= 1) {
 				return mysql_affected_rows ();
@@ -94,7 +97,7 @@ class Dbopera {
 	function data_del($table, $where) {
 		if (is_array ( $where ) && count ( $where ) == 1) {
 			foreach ( $where as $key => $value ) {
-				$sql = "DELETE FROM `hi_{$table}` WHERE (`{$key}`='{$value}')";
+				$sql = "DELETE FROM `{$this->prefix}{$table}` WHERE (`{$key}`='{$value}')";
 				mysql_query ( $sql );
 				if (mysql_affected_rows () >= 1) {
 					return true;
@@ -122,7 +125,7 @@ class Dbopera {
 			}
 			$wherestr = "WHERE " . $wherestr;
 			$wherestr = substr ( $wherestr, 0, - 4 );
-			$sql = "UPDATE hi_{$table} SET {$str} {$wherestr}";
+			$sql = "UPDATE `{$this->prefix}`{$table} SET {$str} {$wherestr}";
 			mysql_query ( $sql );
 			return true;
 		} else {
@@ -132,7 +135,7 @@ class Dbopera {
 	
 	// 查询数据函数
 	function data_query($select = array('*'),$table, $where = '',$order = '',$limit='',$group='') {
-		$prefix = 'hi_';
+		$prefix = $this->prefix;
 		$data = array ();
 		$whereStr = '';
 		$selectStr = '';
