@@ -3,7 +3,7 @@ include_once __DIR__.'/_config.inc.php';
 
 $_SERVER['QUERY_STRING'] = !empty($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : 'index.html';
 //参数内容，必须符合该参数
-$RequestArray = array('index'=>'_index.php','setting');
+$RequestArray = array('index'=>'_index','setting');
 /* 
 //获取到的尾部的参数
 $query_string = explode('.',$_SERVER['QUERY_STRING']);
