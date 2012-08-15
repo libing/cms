@@ -1,5 +1,5 @@
 ﻿<?php
-//include_once 'include/header.php';
+include_once 'header.php';
 include_once '../_config.inc.php';//包含配置文件
 
 session_start();
@@ -25,7 +25,7 @@ if(!empty($_POST) && $_GET['ch'] == 'login'){
 
 	<div id="main" style="">
 		<form action="login.php?ch=login" class="jNice" method="post">
-		<h3>Hiccer登录</h3>
+		<h3>后台登录</h3>
 			<fieldset>
 				<p><label>用户名:</label><input type="text" name="user" class="text-medium" /></p>
 				<p><label>密码:</label><input type="password" name="passwd" class="text-medium" /></p>

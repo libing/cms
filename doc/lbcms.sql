@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2012-08-13 18:36:32
+Date: 2012-08-15 18:36:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,17 +26,48 @@ CREATE TABLE `lb_channel` (
   `chparent` tinyint(4) NOT NULL DEFAULT '0',
   `chsort` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lb_channel
 -- ----------------------------
-INSERT INTO `lb_channel` VALUES ('1', '数据更新', 'update', '0', '2');
-INSERT INTO `lb_channel` VALUES ('2', '网站设置', 'setting', '0', '3');
-INSERT INTO `lb_channel` VALUES ('3', '后台首页', 'index', '0', '1');
-INSERT INTO `lb_channel` VALUES ('4', '数据更新', 'dataup', '1', '1');
-INSERT INTO `lb_channel` VALUES ('6', '网站设置1', 'setting1', '2', '1');
-INSERT INTO `lb_channel` VALUES ('7', '网站设置2', 'setting2', '2', '2');
+INSERT INTO `lb_channel` VALUES ('1', '首页', 'update', '0', null);
+INSERT INTO `lb_channel` VALUES ('2', '历史', 'setting', '0', null);
+INSERT INTO `lb_channel` VALUES ('3', '足底测试', 'index', '0', null);
+INSERT INTO `lb_channel` VALUES ('4', '装备指导', 'dataup', '0', null);
+INSERT INTO `lb_channel` VALUES ('5', '足部保护', 'setting1', '0', null);
+INSERT INTO `lb_channel` VALUES ('6', '训练', 'setting2', '0', null);
+INSERT INTO `lb_channel` VALUES ('7', '体验中心', 'setting3', '0', null);
+INSERT INTO `lb_channel` VALUES ('8', '专家咨询', 'setting4', '0', null);
+INSERT INTO `lb_channel` VALUES ('10', '焦点图', '2', '1', null);
+INSERT INTO `lb_channel` VALUES ('11', '运动服务', '1', '1', null);
+INSERT INTO `lb_channel` VALUES ('12', '冠军体验', '7', '1', null);
+INSERT INTO `lb_channel` VALUES ('13', '专家咨询', '6', '1', null);
+INSERT INTO `lb_channel` VALUES ('14', '装备测评', '5', '1', null);
+INSERT INTO `lb_channel` VALUES ('15', '装备指导', '4', '1', null);
+INSERT INTO `lb_channel` VALUES ('16', '足部保护', '3', '1', null);
+INSERT INTO `lb_channel` VALUES ('17', '滚动图片', '8', '1', null);
+INSERT INTO `lb_channel` VALUES ('18', '焦点图', null, '2', null);
+INSERT INTO `lb_channel` VALUES ('19', '焦点图', null, '3', null);
+INSERT INTO `lb_channel` VALUES ('20', '焦点图', null, '4', null);
+INSERT INTO `lb_channel` VALUES ('21', '焦点图', null, '5', null);
+INSERT INTO `lb_channel` VALUES ('22', '焦点图', null, '6', null);
+INSERT INTO `lb_channel` VALUES ('23', '焦点图', null, '7', null);
+INSERT INTO `lb_channel` VALUES ('24', '焦点图', null, '8', null);
+INSERT INTO `lb_channel` VALUES ('26', '添加信息', null, '2', null);
+INSERT INTO `lb_channel` VALUES ('27', '添加信息', null, '3', null);
+INSERT INTO `lb_channel` VALUES ('28', '添加信息', null, '4', null);
+INSERT INTO `lb_channel` VALUES ('29', '添加信息', null, '5', null);
+INSERT INTO `lb_channel` VALUES ('30', '添加信息', null, '6', null);
+INSERT INTO `lb_channel` VALUES ('31', '添加信息', null, '7', null);
+INSERT INTO `lb_channel` VALUES ('32', '添加信息', null, '8', null);
+INSERT INTO `lb_channel` VALUES ('34', '信息列表', null, '2', null);
+INSERT INTO `lb_channel` VALUES ('35', '信息列表', null, '3', null);
+INSERT INTO `lb_channel` VALUES ('36', '信息列表', null, '4', null);
+INSERT INTO `lb_channel` VALUES ('37', '信息列表', null, '5', null);
+INSERT INTO `lb_channel` VALUES ('38', '信息列表', null, '6', null);
+INSERT INTO `lb_channel` VALUES ('39', '信息列表', null, '7', null);
+INSERT INTO `lb_channel` VALUES ('40', '信息列表', null, '8', null);
 
 -- ----------------------------
 -- Table structure for `lb_data`
@@ -70,7 +101,7 @@ CREATE TABLE `lb_members` (
 -- ----------------------------
 -- Records of lb_members
 -- ----------------------------
-INSERT INTO `lb_members` VALUES ('1', 'lbccer', '1b118a0785063eb3f24ee4fe5a64ac76', null);
+INSERT INTO `lb_members` VALUES ('1', 'hiccer', '1b118a0785063eb3f24ee4fe5a64ac76', null);
 
 -- ----------------------------
 -- Table structure for `lb_settings`
