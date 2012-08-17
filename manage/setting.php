@@ -23,6 +23,11 @@ foreach($channel as $chvalue){
 }
 unset($chvalue);
 
+//判断请求的文件是否为已有的文件
+if(!in_array($ch,$array_channel)){
+	$ch = 'index';
+}
+
 //当前频道的ID
 $current_ch_id = array_search($ch,$array_channel);
 
@@ -35,10 +40,6 @@ foreach($list as $livalue){
 	$array_list[$livalue['id']] = $livalue['chfile'];
 }
 
-//判断请求的文件是否为已有的文件
-if(!in_array($ch,$array_channel)){
-	$ch = 'index';
-}
 if(!in_array($li,$array_list)){
 	$li = array_slice($array_list,0,1);
 	if(is_array($li) && isset($li[0])){
