@@ -9,6 +9,8 @@ header("Content-Type:text/html; charset=UTF-8");
 date_default_timezone_set('PRC');
 //网站跟目录
 $webroot = __DIR__.DIRECTORY_SEPARATOR;
+//上传图片存放地址
+$DIR_images = $webroot.'template_html'.DIRECTORY_SEPARATOR.'affix'.DIRECTORY_SEPARATOR;
 //包含的全局变量
 $_GLOBALS = array();
 
