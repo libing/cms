@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2012-08-15 18:36:22
+Date: 2012-08-27 18:24:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,21 +26,21 @@ CREATE TABLE `lb_channel` (
   `chparent` tinyint(4) NOT NULL DEFAULT '0',
   `chsort` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lb_channel
 -- ----------------------------
-INSERT INTO `lb_channel` VALUES ('1', '首页', 'update', '0', null);
+INSERT INTO `lb_channel` VALUES ('1', '首页', 'index', '0', null);
 INSERT INTO `lb_channel` VALUES ('2', '历史', 'setting', '0', null);
-INSERT INTO `lb_channel` VALUES ('3', '足底测试', 'index', '0', null);
+INSERT INTO `lb_channel` VALUES ('3', '足底测试', 'update', '0', null);
 INSERT INTO `lb_channel` VALUES ('4', '装备指导', 'dataup', '0', null);
 INSERT INTO `lb_channel` VALUES ('5', '足部保护', 'setting1', '0', null);
 INSERT INTO `lb_channel` VALUES ('6', '训练', 'setting2', '0', null);
 INSERT INTO `lb_channel` VALUES ('7', '体验中心', 'setting3', '0', null);
 INSERT INTO `lb_channel` VALUES ('8', '专家咨询', 'setting4', '0', null);
-INSERT INTO `lb_channel` VALUES ('10', '焦点图', '2', '1', null);
-INSERT INTO `lb_channel` VALUES ('11', '运动服务', '1', '1', null);
+INSERT INTO `lb_channel` VALUES ('10', '焦点图', 'uploadfile', '1', null);
+INSERT INTO `lb_channel` VALUES ('11', '运动服务', 'asdfs', '1', null);
 INSERT INTO `lb_channel` VALUES ('12', '冠军体验', '7', '1', null);
 INSERT INTO `lb_channel` VALUES ('13', '专家咨询', '6', '1', null);
 INSERT INTO `lb_channel` VALUES ('14', '装备测评', '5', '1', null);
@@ -75,10 +75,13 @@ INSERT INTO `lb_channel` VALUES ('40', '信息列表', null, '8', null);
 DROP TABLE IF EXISTS `lb_data`;
 CREATE TABLE `lb_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) DEFAULT NULL,
-  `content` text,
   `cateId` int(11) DEFAULT NULL,
-  `comDate` char(20) DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `linkUrl` text,
+  `title` varchar(100) DEFAULT NULL,
+  `describe` text,
+  `content` text,
+  `insertDate` char(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
