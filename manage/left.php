@@ -24,7 +24,7 @@
 
 						<?php
 							foreach($list as $value){
-								echo "<li><a href='?ch={$ch}&li={$value['chfile']}' class='".($li == $value['chfile'] ? 'active':'')."'>{$value['chname']}</a></li>";
+								echo "<li><a href='?ch={$ch}&li={$value['id']}' class='".($li == $value['id'] ? 'active':'')."'>{$value['chname']}</a></li>";
 							}
 							unset($value);
 						?>

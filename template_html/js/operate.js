@@ -1,4 +1,4 @@
-function data_get(id){
+ï»¿function data_get(id){
 	var id = id;
 	var page = $("input:[name="+id+"_page]").val();
 	var url = $("input:[name="+id+"_url]").val();
@@ -11,7 +11,8 @@ function data_get(id){
 			location.reload(true);
 	});
 }
-//»ñÈ¡µ±Ç°ÈÕÆÚ
+
+//è·å–å½“å‰æ—¥æœŸ
 function currentTime(){
 	var d = new Date(),str = '';
 	str += d.getFullYear()+'-';
@@ -23,7 +24,7 @@ function currentTime(){
 	return str;
 }
 
-//¸øÊı×ÖÇ°¼Ó0
+//ç»™æ•°å­—å‰åŠ 0
 function addzero(digit){
 	var digit = digit;
 	if(digit < 10){
@@ -31,4 +32,5 @@ function addzero(digit){
 	}
 	return digit;
 }
+
 

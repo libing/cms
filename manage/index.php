@@ -2,13 +2,12 @@
 include_once __DIR__.DIRECTORY_SEPARATOR.'setting.php';
 include_once $admin_dir.'header.php';
 include_once $admin_dir.'left.php';
-if(!empty($_GET['li'])){
-	include_once $_GET['li'].'.php';
+
+$data = array();
+$data = $DBopera->data_query(array('*'),array('data'),array('cateId'=>$li),array('id'=>'DESC'));
+
+if(!empty($li)){
+	include_once $array_list[$li].'.php';
 }
 
-?>
-                
-
-				
-<?php
 include_once $admin_dir.'footer.php';

@@ -23,7 +23,7 @@ $config = array();
 //数据库配置数据
 $config['HOST'] = '127.0.0.1';
 $config['DBUSER'] = 'root';
-$config['DBPASSWD'] = '';
+$config['DBPASSWD'] = 'hicc';
 $config['DBNAME'] = 'lbcms';
 
 //包含语言包

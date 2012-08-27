@@ -7,14 +7,22 @@
 ?>
 
 <div id="main">
-	<form action="" class="jNice">
+	<form action="join_data.php" method="post" class="jNice" enctype="multipart/form-data">
 	<h3></h3>
     	<table cellpadding="0" cellspacing="0">
-			<tr>
-                <td>Vivamus rutrum nibh in felis tristique vulputate</td>
-                <td class="action"><a href="#" class="view">View</a><a href="#" class="edit">Edit</a><a href="#" class="delete">Delete</a></td>
-            </tr>                        
-       
+    		<?php 
+    		if(!empty($data) && is_array($data)){
+    			foreach($data as $value){
+    				echo '<tr>
+    				<td>'.$value['title'].'</td>
+    				<td class="action"><a href="#" class="view"></a><a href="#" class="edit">编辑</a><a href="#" class="delete">删除</a></td>
+    				</tr>';
+    			}
+    			
+    		}
+    		
+    		?>
+
         </table>
 	<h3></h3>
 		<form action="" method="post" enctype ="multipart/form-data">
@@ -25,7 +33,9 @@
 			<p><label>上传图片</label>
 			<input name="image" id="upimage" type="file">
 			</p>
-            <input type="submit" value="Submit Query" />
+			<input name="channel_ch" id="channel_ch" type="hidden" value="<?php echo $ch; ?>">
+			<input name="channel_li" id="channel_li" type="hidden" value="<?php echo $li; ?>">
+            <input type="submit" value="提交" />
         </fieldset>
 		</form>
     </form>

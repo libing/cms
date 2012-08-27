@@ -8,7 +8,7 @@ if(empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && empty($_SESSION['u
 //包含配置文件
 include_once '../_config.inc.php';
 
-$ch = !empty($_GET['ch']) ? $_GET['ch'] : '' ;//当前请求的频道文件名
+$ch = !empty($_GET['ch']) ? $_GET['ch'] : 'index' ;//当前请求的频道文件名
 $li = !empty($_GET['li']) ? $_GET['li'] : '' ;//当前请求的频道文件名
 
 $admin_dir = __DIR__.DIRECTORY_SEPARATOR;
@@ -40,10 +40,12 @@ foreach($list as $livalue){
 	$array_list[$livalue['id']] = $livalue['chfile'];
 }
 
-if(!in_array($li,$array_list)){
-	$li = array_slice($array_list,0,1);
+if(!array_key_exists($li,$array_list)){
+	$key = array_keys($array_list);
+	$li = $key[0];
+	/* $li = array_slice($array_list,0,1);
 	if(is_array($li) && isset($li[0])){
 		$li = $li[0];	
-	}
+	} */
 }
 
