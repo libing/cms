@@ -14,13 +14,15 @@ $channel_ch = !empty($_POST['channel_ch']) ? $_POST['channel_ch'] : '';
 $channel_li = !empty($_POST['channel_li']) ? $_POST['channel_li'] : '';
 //内容
 $content = !empty($_POST['content']) ? $_POST['content'] : '';
+//图片链接地址
+$linkUrl = !empty($_POST['linkUrl']) ? $_POST['linkUrl'] : '';
 //图片
 $image = !empty($_FILES) ? uploadImage($DIR_images,'image',$_FILES) : '';
 
 $add_data = $DBopera->data_join(
 		'data',
-		array('cateId','linkUrl','title','cn_describe','en_describe','content'),
-		array($channel_li,$image,$title,$cn_descript,$en_descript,$content)
+		array('cateId','linkUrl','images','title','cn_describe','en_describe','content'),
+		array($channel_li,$linkUrl,$image,$title,$cn_descript,$en_descript,$content)
 		);
 if($add_data >= 1){
 	echo '<script>location.href="index.php?ch='.$channel_ch.'&li='.$channel_li.'";</script>';

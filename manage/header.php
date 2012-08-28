@@ -12,4 +12,14 @@
 <!-- JavaScripts-->
 <script type="text/javascript" src="../template_html/js/jquery.js"></script>
 <script type="text/javascript" src="../template_html/js/jNice.js"></script>
+
+<script charset="utf-8" src="../template_html/php_editor/kindeditor.js"></script>
+<script charset="utf-8" src="../template_html/php_editor/lang/zh_CN.js"></script>
+
+<script>
+        var editor;
+        KindEditor.ready(function(K) {
+                editor = K.create('#editor_id');
+        });
+</script>
 </head>
