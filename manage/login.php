@@ -1,6 +1,6 @@
 ﻿<?php
 include_once 'header.php';
-include_once '../_config.inc.php';//包含配置文件
+include_once '../_config.inc1.php';//包含配置文件
 
 session_start();
 if(!empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && !empty($_SESSION['user'])){
