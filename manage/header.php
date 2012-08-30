@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Hiccer Manage</title>
+<title><?php echo $_GLOBALS['webName'].' - 管理后台';?></title>
 
 <!-- CSS -->
 <link href="../template_html/style/transdmin.css" rel="stylesheet" type="text/css" media="screen" />

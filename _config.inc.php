@@ -48,4 +48,10 @@ if(is_array($webConfig[0])){
 		$_GLOBALS[$webKey] = $webValue;
 	}
 }
-
+/* 附加内容 */
+//友情链接
+$flink = $DBopera->data_query(array('*'),array('data'),array('cateId'=>'43'),array('id'=>'ASC'));
+//留言
+$mes = $DBopera->data_query(array('*'),array('data'),array('cateId'=>'44'),array('id'=>'DESC'),array('0'=>'1'));
+//联系我们
+$callme = $DBopera->data_query(array('*'),array('data'),array('cateId'=>'45'),array('id'=>'DESC'),array('0'=>'1'));

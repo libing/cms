@@ -5,9 +5,9 @@ include_once __DIR__.'/setting.php';
 //id
 $id = !empty($_GET['id']) ? $_GET['id'] : '';
 //大列表
-$channel_ch = !empty($_GET['channel_ch']) ? $_GET['channel_ch'] : '';
+$channel_ch = !empty($_GET['ch']) ? $_GET['ch'] : '';
 //小列表
-$channel_li = !empty($_GET['channel_li']) ? $_GET['channel_li'] : '';
+$channel_li = !empty($_GET['li']) ? $_GET['li'] : '';
 
 $add_data = $DBopera->data_del('data',array('id'=>$id));
 if($add_data >= 1){

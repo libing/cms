@@ -125,7 +125,8 @@ class Dbopera {
 			}
 			$wherestr = "WHERE " . $wherestr;
 			$wherestr = substr ( $wherestr, 0, - 4 );
-			$sql = "UPDATE `{$this->prefix}`{$table} SET {$str} {$wherestr}";
+			$sql = "UPDATE `{$this->prefix}{$table}` SET {$str} {$wherestr}";
+
 			mysql_query ( $sql );
 			return true;
 		} else {

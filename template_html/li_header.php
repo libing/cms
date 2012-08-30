@@ -130,28 +130,26 @@
 						</DIV>
 						<DIV class="cm-fl cm-div menu_mob">
 							<DIV class="cm-fl logo">
-								<A title="Ruuners Service Lab"
-									href="<?php echo $_GLOBALS['webHost'];?>"><IMG border=0 alt=""
-									src="template_html/images/logo.png" width="237" height="73"></A>
+								<A title="Ruuners Service Lab" href="<?php echo $_GLOBALS['webHost'];?>"><IMG border=0 alt="" src="template_html/images/logo.png" width="237" height="73"></A>
 							</DIV>
 							<DIV class=nav>
 								<SPAN>
 									<UL id=MenuBar1 class=MenuBarHorizontal>
-										<LI><A href="?index.html">首页<br>Home
+										<LI><A href="?index.html"><center>首页</center>Home
 										</A></LI>
-										<LI><A href="?lists.html">关于我们<br>About
+										<LI><A href="?lists_id_2.html"><center>历史</center>History
 										</A></LI>
-										<LI><A href="?lists.html">足底测试<br>Foot test
+										<LI><A href="?lists_id_3.html"><center>足底测试</center>Foot test
 										</A></LI>
-										<LI><A href="?lists.html">装备指导<br>Equipment guide
+										<LI><A href="?lists_id_4.html"><center>装备指导</center>Equipment guide
 										</A></LI>
-										<LI><A href="?lists.html">足部保护<br>Foot Protect
+										<LI><A href="?lists_id_5.html"><center>足部保护</center>Foot Protect
 										</A></LI>
-										<LI><A href="?lists.html">训练<br>Training
+										<LI><A href="?lists_id_6.html"><center>训练</center>Training
 										</A></LI>
-										<LI><A href="?lists.html">体验中心<br>Experience
+										<LI><A href="?lists_id_7.html"><center>体验中心</center>Experience
 										</A></LI>
-										<LI><A href="?views.html">联系我们<br>Contact
+										<LI><A href="?lists_id_8.html"><center>专家咨询</center>Contact
 										</A></LI>
 									</UL>
 								</SPAN>

@@ -13,7 +13,7 @@
 				}
 				unset($value);
 			?>
-			<li class="logout"><a href="#">LOGOUT</a></li>
+			<li class="logout"><a href="#">退出</a></li>
         </ul>
         <!-- // #end mainNav -->
         

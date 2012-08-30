@@ -25,16 +25,16 @@
 		<DIV class="cm-fl cm-div">
 			<DIV class="cm-fl box-1">
 				<H4 class=lab>
-					<A href="http://rslab.be/nl/rslab-footscan-analyse">运动服务实验室 RSLab</A>
+					<A href="<?php echo $sport[0]['linkUrl'];?>">运动服务实验室 RSLab</A>
 				</H4>
 				<DIV class="cm-fl d-box1 img-1" style="height: 330px;">
-					<embed src="http://player.youku.com/player.php/Type/Folder/Fid/16972133/Ob/1/sid/XMzQxNjMzOTcy/v.swf" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+					<embed src="<?php echo $sport[0]['content'];?>" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
 				</DIV>
 			</DIV>
 			<?php
 			echo '<DIV class="cm-fl box-1">
 				<H4 class=shop>
-					<A title=SHOP href="http://rslab.be/nl/shop">冠军体验服务 Champion Service</A>
+					<A title=SHOP href="'.$winner[0]['linkUrl'].'">冠军体验服务 Champion Service</A>
 				</H4>
 				<DIV class="cm-fl d-box1 img-1">
 					<A href="'.$winner[0]['linkUrl'].'"> <IMG title=Kwaliteit border=0 alt="" width="313" height="183" src="template_html/affix/'.$winner[0]['images'].'"></A> 
@@ -44,23 +44,21 @@
 					</SPAN>
 				</DIV>
 			</DIV>';
-			?>
 			
-			<DIV class="cm-fl box-2">
+			
+			echo '<DIV class="cm-fl box-2">
 				<H4 class=pro>
-					<A title="RSLAB PRO" href="http://rslab.be/nl/rslab-pro">专家咨询
-						Expert Advic</A>
+					<A title="RSLAB PRO" href="'.$expert[0]['linkUrl'].'">专家咨询 Expert Advic</A>
 				</H4>
 				<DIV class="cm-fl d-box1 img-1">
-					<A href="http://rslab.be/nl/rslab-pro"><IMG title=Professioneel
-						border=0 alt="" width="313" height="183"
-						src="template_html/images/img-3.jpg"></A> <SPAN
-						style="COLOR: #c00032" class=title>安鹏</SPAN><BR> <SPAN>在公司的网络中，经常会有人抱怨网速太慢。笔者就是一个鲜活的例子——公司的带宽明明已经够大了，但平时连打开网页都要花费半分钟左右；
-						<hr>中午休息时间想看个几分钟的视频，必须提前20分钟缓冲，否则，等到大家都在使用网络的时候，想看视频基本没辙！
+					<A href="'.$expert[0]['linkUrl'].'"><IMG title=Professioneel border=0 alt="" width="313" height="183" src="template_html/affix/'.$expert[0]['images'].'"></A> 
+					<SPAN style="COLOR: #c00032" class=title>'.$expert[0]['title'].'</SPAN><BR>
+					<SPAN>'.$expert[0]['cn_describe'].'
+						<hr>'.$expert[0]['en_describe'].'
 					</SPAN>
 				</DIV>
-			</DIV>
-
+			</DIV>';
+			?>
 		</DIV>
 	</DIV>
 </DIV>
@@ -111,38 +109,39 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 <DIV class=repeat-bg-2>
 	<DIV class=main-wrapper>
 		<DIV class="cm-fl left-part">
-			<H4>装备测评 Gear evulation</H4>
+			<H4 class=lab><A href="<?php echo $equip[0]['linkUrl'];?>">装备测评 Gear evulation</A></H4>
 			<DIV class="cm-fl d-box1 img-4 left-attribut" style="height: 330px;">
-				<!--<embed src="http://player.youku.com/player.php/Type/Folder/Fid/16972133/Ob/1/sid/XMzQxNjMzOTcy/v.swf" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>-->
+				<embed src="<?php echo $equip[0]['content'];?>" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
 			</DIV>
 		</DIV>
-		<DIV class="cm-fl box-1">
+		<?php 
+		echo '<DIV class="cm-fl box-1">
 			<H4 class=shop>
-				<A title=SHOP href="http://rslab.be/nl/shop">装备指导 Guidance</A>
+				<A title=SHOP href="'.$guide[0]['linkUrl'].'">装备指导 Guidance</A>
 			</H4>
 			<DIV class="cm-fl d-box1 img-1">
-				<A href="http://rslab.be/nl/shop"><IMG title=Kwaliteit border=0
-					alt="" src="template_html/images/img-2.jpg" height="183"
-					width="313"></A> <SPAN style="COLOR: #00b0f5" class=title>安鹏</SPAN><BR>
-				<SPAN>在公司的网络中，经常会有人抱怨网速太慢。笔者就是一个鲜活的例子——公司的带宽明明已经够大了，但平时连打开网页都要花费半分钟左右；
-					<hr>中午休息时间想看个几分钟的视频，必须提前20分钟缓冲，否则，等到大家都在使用网络的时候，想看视频基本没辙！
+				<A href="'.$guide[0]['linkUrl'].'"><IMG title=Kwaliteit border=0
+					alt="" src="template_html/affix/'.$guide[0]['images'].'" height="183"
+					width="313"></A> <SPAN style="COLOR: #00b0f5" class=title>'.$guide[0]['title'].'</SPAN><BR>
+				<SPAN>'.$guide[0]['cn_describe'].'
+					<hr>'.$guide[0]['en_describe'].'
 				</SPAN>
 			</DIV>
 		</DIV>
 		<DIV class="cm-fl box-2">
 			<H4 class=pro>
-				<A title="RSLAB PRO" href="http://rslab.be/nl/rslab-pro">足部保护
-					Protect</A>
+				<A title="RSLAB PRO" href="'.$foot[0]['linkUrl'].'">足部保护 Protect</A>
 			</H4>
 			<DIV class="cm-fl d-box1 img-1">
-				<A href="http://rslab.be/nl/rslab-pro"><IMG title=Professioneel
-					border=0 alt="" src="template_html/images/img-3.jpg" width="313"
-					height="183"></A> <SPAN style="COLOR: #c00032" class=title>安鹏</SPAN><BR>
-				<SPAN>在公司的网络中，经常会有人抱怨网速太慢。笔者就是一个鲜活的例子——公司的带宽明明已经够大了，但平时连打开网页都要花费半分钟左右；
-					<hr>中午休息时间想看个几分钟的视频，必须提前20分钟缓冲，否则，等到大家都在使用网络的时候，想看视频基本没辙！
+				<A href="'.$foot[0]['linkUrl'].'"><IMG title=Professioneel
+					border=0 alt="" src="template_html/affix/'.$foot[0]['images'].'" width="313"
+					height="183"></A> <SPAN style="COLOR: #c00032" class=title>'.$foot[0]['title'].'</SPAN><BR>
+				<SPAN>'.$foot[0]['cn_describe'].'
+					<hr>'.$foot[0]['en_describe'].'
 				</SPAN><BR>
 			</DIV>
-		</DIV>
+		</DIV>';
+		?>
 	</DIV>
 </DIV>
 <!-- Middle Wrapper End -->
