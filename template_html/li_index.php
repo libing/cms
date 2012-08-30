@@ -3,36 +3,19 @@
 <DIV style="BACKGROUND: none transparent scroll repeat 0% 0%"
 	class=main_slider>
 	<UL id=slider1>
-		<LI>
-			<DIV style="POSITION: relative" class=cm-fl>
-				<DIV class=image-box-1>
+	<?php
+	foreach($focus as $focus_value){
+		echo '<LI>
+			<DIV style="POSITION: relative" class="cm-fl">
+				<DIV class="image-box-1">
 					<DIV>
-						<A href="http://rslab.be/nl/rslab-footscan-analyse"> <IMG border=0
-							src="template_html/images/banner.jpg" width="1052" height="514"></A>
+						<A href="'.$focus_value['linkUrl'].'"> <IMG border=0 src="template_html/affix/'.$focus_value['images'].'" width="1052" height="514"></A>
 					</DIV>
 				</DIV>
 			</DIV>
-		</LI>
-		<LI>
-			<DIV style="POSITION: relative" class=cm-fl>
-				<DIV class=image-box-1>
-					<DIV>
-						<IMG border=0 src="template_html/images/shop.jpg" width="1052"
-							height="514">
-					</DIV>
-				</DIV>
-			</DIV>
-		</LI>
-		<LI>
-			<DIV style="POSITION: relative" class=cm-fl>
-				<DIV class=image-box-1>
-					<DIV>
-						<IMG border=0 src="template_html/images/rslab-pro_slider.jpg"
-							width="1052" height="514">
-					</DIV>
-				</DIV>
-			</DIV>
-		</LI>
+		</LI>';
+	}
+	?>
 	</UL>
 </DIV>
 <!-- Banner Wrapper End -->
@@ -45,23 +28,24 @@
 					<A href="http://rslab.be/nl/rslab-footscan-analyse">运动服务实验室 RSLab</A>
 				</H4>
 				<DIV class="cm-fl d-box1 img-1" style="height: 330px;">
-					<!--<embed src="http://player.youku.com/player.php/Type/Folder/Fid/16972133/Ob/1/sid/XMzQxNjMzOTcy/v.swf" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>-->
+					<embed src="http://player.youku.com/player.php/Type/Folder/Fid/16972133/Ob/1/sid/XMzQxNjMzOTcy/v.swf" quality="high" width="310" height="330" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
 				</DIV>
 			</DIV>
-			<DIV class="cm-fl box-1">
+			<?php
+			echo '<DIV class="cm-fl box-1">
 				<H4 class=shop>
-					<A title=SHOP href="http://rslab.be/nl/shop">冠军体验服务 Champion
-						Service</A>
+					<A title=SHOP href="http://rslab.be/nl/shop">冠军体验服务 Champion Service</A>
 				</H4>
 				<DIV class="cm-fl d-box1 img-1">
-					<A href="http://rslab.be/nl/shop"><IMG title=Kwaliteit border=0
-						alt="" width="313" height="183"
-						src="template_html/images/img-2.jpg"></A> <SPAN
-						style="COLOR: #00b0f5" class=title>安鹏</SPAN><BR> <SPAN>在公司的网络中，经常会有人抱怨网速太慢。笔者就是一个鲜活的例子——公司的带宽明明已经够大了，但平时连打开网页都要花费半分钟左右；
-						<hr>中午休息时间想看个几分钟的视频，必须提前20分钟缓冲，否则，等到大家都在使用网络的时候，想看视频基本没辙！<!--<strong><a href="#" title="RSLAB Shop">RSLAB Shop</a></strong>-->
+					<A href="'.$winner[0]['linkUrl'].'"> <IMG title=Kwaliteit border=0 alt="" width="313" height="183" src="template_html/affix/'.$winner[0]['images'].'"></A> 
+					<SPAN style="COLOR: #00b0f5" class=title>'.$winner[0]['title'].'</SPAN><BR> 
+					<SPAN>'.$winner[0]['cn_describe'].'
+						<hr>'.$winner[0]['en_describe'].'
 					</SPAN>
 				</DIV>
-			</DIV>
+			</DIV>';
+			?>
+			
 			<DIV class="cm-fl box-2">
 				<H4 class=pro>
 					<A title="RSLAB PRO" href="http://rslab.be/nl/rslab-pro">专家咨询
@@ -90,33 +74,14 @@
 			<td valign=top id=marquePic1>
 				<table width='100%' cellpadding=3 cellspacing=3 border="0">
 					<tr>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src="http://www.baidu.com/img/logo.gif" width=180 height=120
-								border=0></a><br> <br>01</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>02</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>03</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src="http://www.baidu.com/img/logo.gif" width=180 height=120
-								border=0></a><br> <br>04</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>05</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>06</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src="http://www.baidu.com/img/logo.gif" width=180 height=120
-								border=0></a><br> <br>07</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>08</td>
-						<td align=center width="190" class="gundong"><a href='#'><img
-								src=http://www.baidu.com/img/logo.gif width=180 height=120
-								border=0></a><br> <br>09</td>
+					<?php
+						foreach($roll as $roll_value){
+							echo '<td align=center width="190" class="gundong">
+								<a href="'.$roll_value['linkUrl'].'"><img src="template_html/affix/'.$roll_value['images'].'" width=180 height=120 border=0></a><br> 
+								<br>'.$roll_value['title'].'
+								</td>';
+							}
+					?>
 					</tr>
 				</table>
 			</td>

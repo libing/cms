@@ -6,7 +6,7 @@
     		if(!empty($data) && is_array($data)){
     			foreach($data as $value){
     				echo '<tr>
-    				<td>'.$value['title'].'</td>
+    				<td><a target="_blank" href="'.$value['linkUrl'].'">'.$value['title'].'</a></td>
     				<td class="action"><a href="#" class="view"></a><a href="#" class="edit">编辑</a><a href="#" class="delete">删除</a></td>
     				</tr>';
     			}

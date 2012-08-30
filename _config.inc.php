@@ -4,6 +4,7 @@
  *
  *
  */
+header("Content-Type:text/html; charset=UTF-8");
 //设置所在时区
 date_default_timezone_set('PRC');
 //斜杠
@@ -28,7 +29,7 @@ $config = array();
 //数据库配置数据
 $config['HOST'] = '127.0.0.1';
 $config['DBUSER'] = 'root';
-$config['DBPASSWD'] = '';
+$config['DBPASSWD'] = 'hicc';
 $config['DBNAME'] = 'lbcms';
 
 //包含语言包
@@ -42,6 +43,9 @@ include_once $webroot.'include'.$sprit.'class.Dbopera.php';
 $DBopera = new Dbopera($config);
 //网站配置
 $webConfig = $DBopera->data_query(array('*'),array('settings'));
-foreach($webConfig[0] as $webKey=>$webValue){
-	$_GLOBALS[$webKey] = $webValue;
+if(is_array($webConfig[0])){
+	foreach($webConfig[0] as $webKey=>$webValue){
+		$_GLOBALS[$webKey] = $webValue;
+	}
 }
+

@@ -6,7 +6,7 @@ if(empty($_SESSION['login']) && $_SESSION['login'] = 'yes' && empty($_SESSION['u
 }
 
 //包含配置文件
-include_once '../_config.inc1.php';
+include_once '../_config.inc.php';
 
 $ch = !empty($_GET['ch']) ? $_GET['ch'] : 'index' ;//当前请求的频道文件名
 $li = !empty($_GET['li']) ? $_GET['li'] : '' ;//当前请求的频道文件名
